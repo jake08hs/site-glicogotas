@@ -1,0 +1,143 @@
+/* Container Geral */
+.conheca-container {
+    width: 100%;
+    padding: 100px 20px;
+    background-color: var(--branco);
+    display: flex;
+    justify-content: center;
+}
+
+.conheca-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 80px; 
+}
+
+.conheca-logo-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.circle-outer {
+    width: 340px;
+    height: 340px;
+    background-color: var(--branco);
+    border: 15px solid var(--azul-extra-claro); 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.circle-inner {
+    width: 290px;
+    height: 290px;
+    background-color: var(--rosa-extra-claro); 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo-image-inner {
+    width: 70%; 
+    height: auto;
+    object-fit: contain;
+}
+
+/* ÁREA DE TEXTO AJUSTADA */
+.conheca-text-area {
+    flex: 1.5;
+    text-align: left;
+}
+
+.conheca-title {
+    font-family: 'Chewy', cursive;
+    font-size: 48px;
+    color: var(--azul-principal);
+    margin-bottom: 25px;
+}
+
+.conheca-description {
+    font-family: 'Arial', sans-serif;
+    font-size: 17px;
+    color: #4a5568; 
+    line-height: 1.7;
+    margin-bottom: 20px;
+    
+    /* JUSTIFICADO AQUI */
+    text-align: justify;
+    text-justify: inter-word; /* Melhora o espaçamento entre palavras */
+}
+
+/* BOTÃO VER MAIS */
+.btn-ver-mais {
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    border: none;
+    padding: 15px 45px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-ver-mais:hover {
+    background-color: #3A9BB9; 
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(75, 176, 208, 0.4);
+}
+
+/* Responsividade Refinada */
+@media (max-width: 900px) {
+    .conheca-container {
+        padding: 60px 20px;
+    }
+
+    .conheca-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .conheca-text-area {
+        /* No mobile, centralizar o bloco de texto fica visualmente melhor, 
+           mas manteremos o parágrafo justificado para seguir seu pedido */
+        text-align: center;
+    }
+
+    .conheca-description {
+        /* Mantém justificado, mas centraliza o bloco em si */
+        text-align: justify;
+        max-width: 600px;
+        margin: 0 auto 20px;
+    }
+    
+    .circle-outer {
+        width: 260px; /* Reduzi um pouco mais para ganhar espaço vertical */
+        height: 260px;
+        border-width: 10px;
+    }
+    
+    .circle-inner {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .conheca-title {
+        font-size: 32px;
+        margin-top: 10px;
+    }
+
+    .btn-ver-mais {
+        width: 100%; 
+        max-width: 300px;
+    }
+}

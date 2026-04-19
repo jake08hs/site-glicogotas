@@ -1,0 +1,132 @@
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* CONTAINER */
+.header-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+/* LOGO */
+.header-logo img {
+  height: 65px;
+  object-fit: contain;
+}
+
+/* MENU */
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-menu a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header-menu a:hover {
+  color: #ed71a3;
+}
+
+/* BOTÃO (AÇÃO) */
+.header-action button {
+  background-color: #ed71a3;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s;
+}
+
+.header-action button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* --- ESTILOS DO HAMBURGUER (Adicione isso) --- */
+.hamburger {
+  display: none; /* Escondido no PC */
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #333;
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+/* --- RESPONSIVIDADE --- */
+
+@media (max-width: 992px) {
+  .header-container {
+    /* Inverte: Hamburguer esquerda, Logo direita */
+    flex-direction: row-reverse; 
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    display: block; /* Aparece no mobile */
+  }
+
+  /* Transformação em X quando aberto */
+  .hamburger.active .bar:nth-child(2) { opacity: 0; }
+  .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  /* Ajuste do Menu Lateral */
+  .header-menu {
+    position: fixed;
+    left: -100%; /* Escondido */
+    top: 100px;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 80%;
+    height: calc(100vh - 100px);
+    padding: 40px 20px;
+    gap: 30px;
+    transition: 0.4s;
+    box-shadow: 5px 0 10px rgba(0,0,0,0.1);
+    align-items: center;
+  }
+
+  .header-menu.open {
+    left: 0; /* Desliza para aparecer */
+  }
+
+  .header-menu a {
+    font-size: 20px;
+    font-family: 'Chewy', cursive;
+  }
+
+  /* O que fazer com o botão de contato original no mobile? */
+  .header-action {
+    display: none; /* Esconde para não embolar com a logo na direita */
+  }
+}

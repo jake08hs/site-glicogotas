@@ -1,0 +1,117 @@
+/* fontes */
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Lato:wght@300;400;700&display=swap');
+
+/* --- PALETA GLICOGOTAS --- */
+:root {
+  /* Cores Principais */
+  --verde-principal: #00D287;
+  --rosa-principal: #F4719C;
+  --amarelo-principal: #FEDE74;
+  --azul-principal: #4BB0D0;
+  --branco: #FFFFFF;
+
+  /* Cores Figurantes (Destaques) */
+  --verde-destaque: #80BA0D;
+  --rosa-destaque: #F58F95;
+  --vinho-destaque: #A81A1A;
+
+  /* Cores para Fundos */
+  --bg-verde: #88DBBD;
+  --bg-folha: #C7E490;
+  --bg-rosa-claro: #FFAFB3;
+  --bg-laranja: #FFB450;
+  --bg-azul-claro: #ADDFEF;
+
+  /* Tons pastéis extras para os círculos */
+  --azul-extra-claro: #b2e3ed;
+  --rosa-extra-claro: #fde2ed;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 110px; /* Espaço para o Header fixo */
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  overflow-x: hidden; /* Evita rolagem lateral chata no celular */
+  line-height: 1.6;
+}
+
+h1, h2, .logo {
+  font-family: 'Chewy', cursive;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* --- CONFIGURAÇÕES RESPONSIVAS GERAIS --- */
+
+/* Imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Containers principais */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- MEDIA QUERIES (O Coração da Responsividade) --- */
+
+/* Tablets e Celulares Grandes (Até 768px) */
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px; /* Header menor no celular */
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Seção de equipe ou fotos: de 4 colunas para 2 colunas */
+  .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+/* Celulares Pequenos (Até 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Empilha tudo em uma única coluna */
+  .grid-layout, .flex-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .btn {
+    width: 100%; /* Botões ocupam a largura toda para facilitar o clique */
+    text-align: center;
+  }
+}
