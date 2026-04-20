@@ -1,6 +1,6 @@
 import React from 'react';
 import './Conheca.css';
-import logoGlicogotas from '../assets/images/group 2.png'; 
+import logoGlicogotas from '../assets/images/group-2.png'; 
 
 export default function Conheca() {
   return (

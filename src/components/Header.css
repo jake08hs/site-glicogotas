@@ -47,7 +47,7 @@
   color: #ed71a3;
 }
 
-/* BOTÃO (AÇÃO) */
+
 .header-action button {
   background-color: #ed71a3;
   color: white;
@@ -65,9 +65,9 @@
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
-/* --- ESTILOS DO HAMBURGUER (Adicione isso) --- */
+
 .hamburger {
-  display: none; /* Escondido no PC */
+  display: none; 
   cursor: pointer;
   z-index: 1100;
 }
@@ -82,28 +82,25 @@
   border-radius: 2px;
 }
 
-/* --- RESPONSIVIDADE --- */
+
 
 @media (max-width: 992px) {
   .header-container {
-    /* Inverte: Hamburguer esquerda, Logo direita */
     flex-direction: row-reverse; 
     padding: 0 20px;
   }
 
   .hamburger {
-    display: block; /* Aparece no mobile */
-  }
+    display: block; 
 
-  /* Transformação em X quando aberto */
   .hamburger.active .bar:nth-child(2) { opacity: 0; }
   .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
   .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-  /* Ajuste do Menu Lateral */
+ 
   .header-menu {
     position: fixed;
-    left: -100%; /* Escondido */
+    left: -100%; 
     top: 100px;
     flex-direction: column;
     background-color: #ffffff;
@@ -117,7 +114,7 @@
   }
 
   .header-menu.open {
-    left: 0; /* Desliza para aparecer */
+    left: 0; 
   }
 
   .header-menu a {
@@ -125,8 +122,8 @@
     font-family: 'Chewy', cursive;
   }
 
-  /* O que fazer com o botão de contato original no mobile? */
   .header-action {
-    display: none; /* Esconde para não embolar com a logo na direita */
+    display: none;
   }
+}
 }

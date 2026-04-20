@@ -50,7 +50,6 @@
     object-fit: contain;
 }
 
-/* ÁREA DE TEXTO AJUSTADA */
 .conheca-text-area {
     flex: 1.5;
     text-align: left;
@@ -70,12 +69,11 @@
     line-height: 1.7;
     margin-bottom: 20px;
     
-    /* JUSTIFICADO AQUI */
     text-align: justify;
-    text-justify: inter-word; /* Melhora o espaçamento entre palavras */
+    text-justify: inter-word; 
 }
 
-/* BOTÃO VER MAIS */
+
 .btn-ver-mais {
     background-color: var(--azul-principal);
     color: var(--branco);
@@ -96,7 +94,7 @@
     box-shadow: 0 8px 20px rgba(75, 176, 208, 0.4);
 }
 
-/* Responsividade Refinada */
+
 @media (max-width: 900px) {
     .conheca-container {
         padding: 60px 20px;
@@ -108,20 +106,18 @@
     }
     
     .conheca-text-area {
-        /* No mobile, centralizar o bloco de texto fica visualmente melhor, 
-           mas manteremos o parágrafo justificado para seguir seu pedido */
+       
         text-align: center;
     }
 
     .conheca-description {
-        /* Mantém justificado, mas centraliza o bloco em si */
         text-align: justify;
         max-width: 600px;
         margin: 0 auto 20px;
     }
     
     .circle-outer {
-        width: 260px; /* Reduzi um pouco mais para ganhar espaço vertical */
+        width: 260px; 
         height: 260px;
         border-width: 10px;
     }
