@@ -1,13 +1,13 @@
 import React from 'react';
 import './Conheca.css';
-import logoGlicogotas from '../assets/images/group-2.png'; 
+import logoGlicogotas from '../assets/images/group-2.png';
 
 export default function Conheca() {
   return (
     <section className="conheca-container">
       <div className="conheca-content">
         
-        {/* Lado Esquerdo: O Círculo com a Logo GLICO */}
+    
         <div className="conheca-logo-area">
           <div className="circle-outer">
             <div className="circle-inner">
