@@ -19,14 +19,13 @@ export default function Header() {
     <header className="header">
       <div className="header-container">
         
-        {/* Ícone Hamburguer (Apenas Mobile) */}
+      
         <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
         </div>
 
-        {/* Logo (No Mobile vai para a direita via CSS) */}
         <div className="header-logo">
           <img src={logoglico} alt="Glicogotas Logo" />
         </div>
@@ -41,7 +40,7 @@ export default function Header() {
         
         </nav>
 
-        {/* Botão Contato (Apenas Desktop) */}
+        {/* Botão Contato  */}
         <div className="header-action">
           <button onClick={() => window.location.href = '#contato'}>
             Contato
