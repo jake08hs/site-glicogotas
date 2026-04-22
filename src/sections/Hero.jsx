@@ -29,7 +29,7 @@ export default function Hero() {
          <div className="hero-buttons">
 
   <button className="btn-primary">
-    Conheça a Aventura
+    Conheça nossa Turma
   </button>
 
   <a 
